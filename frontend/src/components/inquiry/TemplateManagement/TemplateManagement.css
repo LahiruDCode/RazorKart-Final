@@ -1,0 +1,266 @@
+.template-management-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.template-header {
+    background-color: #FF9955;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.template-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.add-template-btn {
+    background-color: #FF3900;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.add-template-btn:hover {
+    background-color: #FF0D00;
+}
+
+.back-btn {
+    background-color: #FFB200;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.back-btn:hover {
+    background-color: #FF9300;
+}
+
+.template-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid #FFB200;
+}
+
+.template-form h3 {
+    color: #FF3900;
+    margin: 0 0 1.5rem 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #FF6600;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #FFB200;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #FF6600;
+    box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.1);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.save-btn {
+    background-color: #FF3900;
+    color: #fff;
+}
+
+.save-btn:hover {
+    background-color: #FF0D00;
+}
+
+.cancel-btn {
+    background-color: #FFB200;
+    color: #fff;
+}
+
+.cancel-btn:hover {
+    background-color: #FF9300;
+}
+
+.save-btn,
+.cancel-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.template-card {
+    background-color: #fff;
+    border: 1px solid #FFB200;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.template-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 147, 0, 0.2);
+}
+
+.template-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.template-card-header h3 {
+    margin: 0;
+    color: #FF3900;
+    font-size: 1.2rem;
+}
+
+.template-category {
+    background-color: #FF9955;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+}
+
+.template-content {
+    color: #333;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.template-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.edit-btn {
+    background-color: #FF9300;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    background-color: #FF6600;
+}
+
+.delete-btn {
+    background-color: #FF0D00;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #FF3900;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #FF6600;
+}
+
+.error {
+    color: #FF0D00;
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 13, 0, 0.1);
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.template-modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.template-modal h3 {
+    margin: 0 0 1.5rem 0;
+    color: #333;
+} 

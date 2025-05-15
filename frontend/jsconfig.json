@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "*": ["*", "*.js", "*.jsx"]
+    }
+  },
+  "include": ["src"]
+} 

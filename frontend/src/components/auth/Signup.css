@@ -1,0 +1,351 @@
+/* Chrome autofill dropdown animation fix - must be at top of file */
+@keyframes autofillFix {
+  to {
+    color: white;
+    background: rgba(45, 45, 45, 0.9);
+  }
+}
+
+input:-webkit-autofill {
+  animation-name: autofillFix;
+  animation-fill-mode: both;
+}
+
+/* Target Google Chrome's autofill feature */
+input:-webkit-autofill {
+  background-color: rgba(45, 45, 45, 0.9) !important;
+  -webkit-text-fill-color: white !important;
+  caret-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(45, 45, 45, 0.9) inset !important;
+  box-shadow: 0 0 0px 1000px rgba(45, 45, 45, 0.9) inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+.signup-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.signup-content {
+  display: flex;
+  background: rgba(28, 28, 28, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 2.5rem;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem;
+}
+
+.social-signup {
+  flex: 1;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-signup h3 {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.divider-vertical {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 2rem;
+}
+
+.signup-form-container {
+  flex: 1.5;
+  padding-left: 2rem;
+}
+
+.signup-form-container h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.login-prompt {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+
+.login-prompt a {
+  color: #FF6600;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.login-prompt a:hover {
+  color: #FF3900;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.social-button .icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.social-button.google {
+  background: rgba(219, 68, 55, 0.2);
+}
+
+.social-button.google:hover {
+  background: rgba(219, 68, 55, 0.3);
+}
+
+.social-button.facebook {
+  background: rgba(24, 119, 242, 0.2);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Force dark backgrounds on all form inputs */
+.signup-form input,
+.signup-container input,
+.login-form input {
+  background-color: rgba(45, 45, 45, 0.9) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.dark-input {
+  width: 100%;
+  padding: 0.9rem;
+  background: rgba(45, 45, 45, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: white !important;
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none !important;
+}
+
+/* Fix for autocomplete white background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px rgba(45, 45, 45, 0.9) inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: white;
+  background-color: rgba(45, 45, 45, 0.9) !important;
+}
+
+/* Fix dropdown menus and selection backgrounds */
+option,
+datalist,
+select,
+input[list] {
+  background-color: rgba(45, 45, 45, 0.9) !important;
+  color: white !important;
+}
+
+/* Style dropdown list items on hover */
+option:hover,
+option:focus,
+option:active {
+  background-color: rgba(60, 60, 60, 0.9) !important;
+  color: white !important;
+}
+
+/* Style for browser native dropdown suggestions */
+input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/* Target Chrome's autofill dropdown */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 1000px rgba(45, 45, 45, 0.9) inset !important;
+}
+
+/* Target Chrome's autofill dropdown menu */
+input.dark-input:-webkit-autofill ~ .autocomplete-dropdown,
+.dark-input ~ .autocomplete-dropdown,
+::-webkit-credentials-auto-fill-button,
+::-webkit-credentials-auto-fill-button:hover,
+::-webkit-credentials-auto-fill-button:active,
+:-internal-autofill-previewed,
+:-internal-autofill-selected,
+:-webkit-autofill-strong-password-viewable-icon {
+  background-color: rgba(45, 45, 45, 0.9) !important;
+  color: white !important;
+  appearance: none !important;
+}
+
+/* Additional aggressive approach */
+input:-internal-autofill-selected {
+  -webkit-box-shadow: 0 0 0 1000px rgba(45, 45, 45, 0.9) inset !important;
+  box-shadow: 0 0 0 1000px rgba(45, 45, 45, 0.9) inset !important;
+  background-color: rgba(45, 45, 45, 0.9) !important;
+  color: white !important;
+}
+
+.dark-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-input:focus {
+  outline: none !important;
+  border-color: #FF6600 !important;
+  background: rgba(60, 60, 60, 0.9) !important;
+}
+
+.dark-input.error {
+  border-color: #ff4444;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.75rem;
+  position: absolute;
+  bottom: -1.2rem;
+  left: 0;
+}
+
+.signup-button {
+  background: rgba(255, 102, 0, 0.8);
+  color: white;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.signup-button:hover {
+  background: rgba(255, 102, 0, 0.9);
+  transform: translateY(-1px);
+}
+
+.message-popup {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  animation: slideUp 0.3s ease-out;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.message-popup.success {
+  background: rgba(39, 174, 96, 0.9);
+  color: white;
+  border: 1px solid rgba(39, 174, 96, 0.2);
+}
+
+.message-popup.error {
+  background: rgba(231, 76, 60, 0.9);
+  color: white;
+  border: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-content {
+    flex-direction: column;
+    max-width: 420px;
+  }
+
+  .social-signup {
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+
+  .divider-vertical {
+    width: 100%;
+    height: 1px;
+    margin: 2rem 0;
+  }
+
+  .signup-form-container {
+    padding-left: 0;
+  }
+}

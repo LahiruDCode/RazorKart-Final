@@ -1,0 +1,97 @@
+.menu {
+  width: 250px;
+  height: 100vh;
+  background: #1a1a1a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-header {
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
+.menu-logo {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.menu-logo:hover {
+  transform: scale(1.05);
+}
+
+.menu-header h2 {
+  margin: 0;
+  color: #FF6600;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.menu-nav {
+  flex: 1;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.menu-item.active {
+  background: rgba(255, 102, 0, 0.1);
+  color: #FF6600;
+  border-right: 3px solid #FF6600;
+}
+
+.menu-item i {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+.menu-footer {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid rgba(145, 141, 161, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
+.version {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+.logout-button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #FF8800 !important;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background: #ff6600 !important;
+}
